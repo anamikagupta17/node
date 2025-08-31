@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#{title}</title>
+    link(rel="stylesheet", href="../static/fev.png")
+    style
+        include ../static/style.css
+</head>
+
+<body class="body">
+    <div class="navbar">
+        <a class="active" href="/">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menus</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <h2>Hello Pug Website</h2>
+    p #{contnent}
+    <div>
+        <h3>Yoga Class Registration</h3>
+         <h4>#{message}</h4>
+        <form class="yoga-form" action="/" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+            <label for="class-type">Preferred Class Type</label>
+            <select id="class-type" name="class-type" required>
+                <option value="">Select a class</option>
+                <option value="beginner">Beginner Yoga</option>
+                <option value="intermediate">Intermediate Yoga</option>
+                <option value="advanced">Advanced Yoga</option>
+            </select>
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="10" max="100" placeholder="Your age" required>
+
+            <input type="submit" value="Register">
+        </form>
+
+    </div>
+
+
+
+</body>
+
+</html>

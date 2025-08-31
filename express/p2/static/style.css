@@ -1,0 +1,110 @@
+body {
+  font-family: "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .6;
+}
+
+h2{
+    padding: 3px 8px;
+}
+p{
+    padding: 3px 8px;
+}
+
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+
+  color: black;
+}
+
+.navbar a.active {
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #2e8b57;
+  margin-top: 20px;
+}
+
+.yoga-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.yoga-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.yoga-form input[type="text"],
+.yoga-form input[type="email"],
+.yoga-form input[type="tel"],
+.yoga-form input[type="number"],
+.yoga-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 2px solid black;
+}
+
+.yoga-form input[type="submit"] {
+  background-color: #060707;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.yoga-form input[type="submit"]:hover {
+  background-color: #060707;
+}
+
+h4{
+    text-align: center;
+    font-size: 16px;
+}
