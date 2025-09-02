@@ -1,0 +1,101 @@
+doctype html 
+html
+    head 
+        title Dance title
+        link(rel="icon" type="image/png" href="/static/fev.png")
+        style 
+            include ../public/style.css
+    body 
+        header 
+            nav#navbar.navbar
+                .logo
+                    a(href="/")
+                        img(src="/static/logo.png", alt="Logo")
+                    span#logoText ADA
+                ul
+                    li #[a(href="/") Home ]
+                    li #[a(href="/about") About ]
+                    li #[a(href="/contact") Contact ]
+                    li #[a(href="/services") Services ]
+                    li #[a(href="/classInfo") Class Info]
+
+        main     
+            section#introsection 
+                h1 Welcome to Anamika's Dance Academy
+                h2 “Move with Passion, Dance with Heart”
+                p#introP !we believe dance is not just an art, it’s a lifestyle. Explore hip-hop, classical, contemporary, and more with our expert instructors.
+
+            section#sponserSection
+                .container
+                    h2 Our Sponsors
+                    p We are proud to be supported by these amazing partners who help us bring the best dance experiences to our community.
+
+                    .sponsors
+                        img(src="/static/logo1.jpg", alt="Sponsor 1")
+                        img(src="/static/logo2.webp", alt="Sponsor 2")
+                        img(src="/static/logo3.webp", alt="Sponsor 3")
+                        img(src="/static/logo4.jpg", alt="Sponsor 4")
+
+
+            //- Our Mission Section
+            section#mission
+                h2 Our Mission
+                p Our goal is to empower students with knowledge and practical skills to achieve success.
+                
+                .mission-container
+                    .mission-card
+                        h3 Quality Education
+                        p Providing top-notch learning resources for all levels.
+                    .mission-card
+                        h3 Practical Skills
+                        p Hands-on training to prepare students for real-world challenges.
+                    .mission-card
+                        h3 Community Support
+                        p Building a supportive learning community for growth and collaboration.            
+                                    
+            //- About Section
+            section#about-section
+                h2 About Us
+                p We are passionate about teaching and helping students achieve their goals. 
+
+            //- Services Section
+            section#services-section
+                h2 Services
+                .services-container
+                    .service
+                        h3 Online Classes
+                        p Learn from the comfort of your home.
+                    .service
+                        h3 Workshops
+                        p Hands-on practical learning sessions.
+                    .service
+                        h3 Personalized Mentoring
+                        p One-on-one guidance from experts.
+
+            //- Class Info Section
+            section#classes-section
+                h2 Class Info
+                ul
+                    li Beginner Classes - Monday to Wednesday
+                    li Intermediate Classes - Thursday and Friday
+                    li Advanced Classes - Saturday
+
+            //- Contact Section
+            section#contact-section
+                h2 Contact Us
+                form.custom-form
+                    label(for="name") Name
+                    input#name(type="text" placeholder="Enter your name")
+                    
+                    label(for="email") Email
+                    input#email(type="email" placeholder="Enter your email")
+                    
+                    label(for="message") Message
+                    textarea#message(placeholder="Enter your message")
+                    
+                    button(type="submit") Submit
+
+
+        footer#footer    
+            | © 2025 Dance Website | All Rights Reserved
+

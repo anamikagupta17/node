@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+main {
+  flex: 1;
+}
+
+/* Navbar container */
+.navbar {
+  background: #720806; /* dark background */
+
+  display: flex;
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center;
+  padding: 0px 10px;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove default ul styles */
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar li {
+  margin-left: 30px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  font-family: cursive;
+}
+
+/* Links */
+.navbar a {
+  text-decoration: none;
+  color: #ecf0f1; /* light text */
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding: 8px 10px;
+  display: inline-block;
+}
+
+/* Hover effect */
+.navbar a:hover {
+  color: #030706;
+ 
+}
+
+/* Active link */
+.navbar a.active {
+  color: #040b0a;
+
+}
+
+.navbar .logo img {
+  height: 35px; /* adjust as needed */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.logo a{
+    padding: 8px 0px;
+}
+#logoText {
+  color: #fff;
+
+  font-style: italic;
+   font-size: 16px;
+    font-family: cursive;
+}
+
+
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar li {
+    margin: 10px 0;
+  }
+}
+
+/* ========================
+   Intro Section (Hero)
+======================== */
+#introsection {
+  background: url("/static/bg.webp") no-repeat center center/cover; /* replace with your dance bg */
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+#introsection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for better text visibility */
+}
+
+#introsection h1 {
+  font-size: 3rem;
+  z-index: 1;
+  animation: fadeInDown 1.2s ease;
+}
+
+#introsection p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  z-index: 1;
+  animation: fadeInUp 1.2s ease;
+  color: rgb(205, 20, 20);
+}
+
+/* simple animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================
+   Sponsor Section
+========================== */
+#sponserSection {
+  background: #dbacac;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#sponserSection h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#sponserSection p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+#sponserSection .sponsors {
+  display: flex; /* horizontal row */
+  flex-direction: row; /* ensure row-wise layout */
+  justify-content: center; /* center logos */
+  align-items: center;
+  gap: 20px; /* space between logos */
+  flex-wrap: nowrap; /* prevent wrapping */
+  overflow-x: auto; /* scroll if needed */
+  padding: 10px 0;
+}
+
+#sponserSection .sponsors img {
+  width: 80px; /* small logo size */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+#sponserSection .sponsors img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  #sponserSection .sponsors img {
+    width: 60px;
+  }
+}
+
+/* ========================
+   Footer
+======================== */
+#footer {
+  background: #720806;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
+
+#footer a {
+  color: #1abc9c;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+#footer a:hover {
+  color: #16f1b8;
+}
+
+/* Our Mission Section */
+#mission {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.mission-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.mission-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+}
+
+.mission-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.mission-card p {
+  color: #555;
+  text-align: left;
+}
+
+#about-section {
+  background: url("/static/bg2.webp") no-repeat center center/cover; /* replace with your dance bg */
+  padding: 20px 20px;
+  text-align: center;
+  height: 100px;
+}
+
+#about-section h2 {
+  margin-bottom: 20px;
+  color: #e01111;
+}
+
+#about-section p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #ededed;
+}
+
+/* Services Section */
+#services-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#services-section h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#services-section .services-container {
+  display: flex;
+  justify-content: center; /* centers the cards */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 20px; /* space between cards */
+}
+
+#services-section .service {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px; /* fixed width for all cards */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left; /* aligns title & text properly */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* spacing between title and text */
+}
+
+#services-section .service h3 {
+  margin: 0;
+  color: #333;
+}
+
+#services-section .service p {
+  margin: 0;
+  color: #555;
+}
+
+/* Class Info Section */
+#classes-section {
+  background: #dbacac;
+  padding: 40px 20px;
+  text-align: center;
+  color: #b7283b; /* change to any color you like */
+  font-style: italic; /* or normal, oblique */
+  font-weight: bold; /* optional: makes text bold */
+  font-family: "Arial", sans-serif; /* change font style */
+}
+
+#classes-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#classes-section ul {
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+}
+
+/* Contact Section */
+#contact-section {
+  padding: 20px 20px;
+  text-align: center;
+}
+
+#contact-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.custom-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+.custom-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-form input,
+.custom-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus {
+  border-color: #100906; /* highlight color */
+}
+
+.custom-form button {
+  background-color: #100906;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.custom-form button:hover {
+  background-color: #100906;
+}
